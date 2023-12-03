@@ -35,7 +35,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <StatusBar
-        barStyle={!colorScheme === "light" ? "dark-content" : "light-content"}
+        barStyle={colorScheme === "light" ? "dark-content" : "light-content"}
       />
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
