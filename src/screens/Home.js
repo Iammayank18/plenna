@@ -56,7 +56,11 @@ const Home = ({ navigation }) => {
   };
 
   useEffect(() => {
-    dispatch(productAction.fetchAllProducts(allProducts));
+    dispatch(
+      productAction.fetchAllProducts(
+        Array.isArray(allProducts) ? allProducts : []
+      )
+    );
   }, []);
 
   if (allProductLoading) {
